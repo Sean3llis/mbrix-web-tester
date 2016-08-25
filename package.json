@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Sean3llis/mbrix-web-tester/issues"
   },
-  "homepage": "https://github.com/Sean3llis/mbrix-web-tester#readme"
+  "homepage": "https://github.com/Sean3llis/mbrix-web-tester#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.1.0"
+  }
 }
