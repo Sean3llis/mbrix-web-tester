@@ -1,12 +1,10 @@
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 7777;
+'use strict';
 
-app.get('/', function(req, res) {
-  console.log('req ~~>', req);
-  res.send('lolz');
-})
+const Hapi = require('hapi');
+const server = new Hapi.Server();
+server.connection({ port: process.env.PORT || 7777 });
 
-app.listen(port, function() {
-  console.log('running on port', port);
-})
+server.start((err) => {
+    if (err) throw err;
+    console.log(`Server running at: ${server.info.uri}`);
+});
