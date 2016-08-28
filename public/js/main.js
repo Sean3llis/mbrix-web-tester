@@ -15,13 +15,15 @@
     for (var i = 0; i < dropdowns.length; i++) {
       var currentDropdown = dropdowns[i];
       mwt.dropdowns[currentDropdown.dataset.type] = currentDropdown;
-      dropdowns[i].addEventListener('change', this.onDropdownChange);
+      dropdowns[i].addEventListener('change', this.onDropdownChange.bind(this));
     }
   };
 
   mwt.onDropdownChange = function(e) {
     const dropdown = e.target;
     const type = dropdown.dataset.type;
+    this.meta[type] = dropdown.value;
+    this.updateUrl();
   };
 
   mwt.setMeta = function() {
@@ -38,6 +40,13 @@
       const dropdown = this.dropdowns[key];
       dropdown.value = mwt.meta[key];
     }
+  };
+
+  mwt.updateUrl = function() {
+    const environment = this.meta.environment;
+    const product = this.meta.product;
+    const adType = this.meta.adType;
+    window.location.pathname = `${environment}/${product}/${adType}`;
   };
 
   scope.addEventListener('DOMContentLoaded', function() {

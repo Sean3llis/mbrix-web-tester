@@ -33,9 +33,11 @@ server.route({
   handler: function (request, reply) {
     const product = request.params.product;
     const env = request.params.env;
-    const type = request.params.type;
+    const adType = request.params.type;
     reply.view('index', {
-      title: `${env}|${product}|${type}`,
+      env,
+      product,
+      adType,
       dropdowns: dropdowns
     });
   }
