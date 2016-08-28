@@ -26,6 +26,7 @@
     "gulp-nodemon": "^2.1.0",
     "handlebars": "^4.0.5",
     "hapi": "^15.0.1",
+    "inert": "^4.0.2",
     "vision": "^4.1.0"
   },
   "devDependencies": {

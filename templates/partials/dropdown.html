@@ -1,0 +1,9 @@
+<div class="col s6">
+  <label>{{label}}</label>
+  <select class="browser-default">
+    <option value="" disabled selected>Environment</option>
+    {{#each options}}
+      <option value="{{value}}">{{label}}</option>
+    {{/each}}
+  </select>
+</div>

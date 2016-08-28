@@ -1,4 +1,13 @@
-<div>hello world</div>
-<div>Env: {{env}}</div>
-<div>Product: {{product}}</div>
-<div>Type: {{type}}</div>
+<div id="hero">
+  <div class="container">
+    <h2>{{title}}</h2>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+  {{#each dropdowns}}
+  {{> dropdown this}}
+  {{/each}}
+  </div>
+</div>
