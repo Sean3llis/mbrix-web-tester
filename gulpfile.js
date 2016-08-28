@@ -4,6 +4,7 @@ var nodemon = require('nodemon');
 gulp.task('default', function() {
   nodemon({
     script: 'server.js',
+    ext: 'js css html',
     env: {
       PORT: 7777
     },
@@ -12,4 +13,4 @@ gulp.task('default', function() {
   .on('restart', function() {
     console.log('[restarting]');
   });
-})
+});

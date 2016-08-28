@@ -1,6 +1,6 @@
 module.exports = [
   {
-    type: 'environments',
+    type: 'environment',
     label: 'Select Environment',
     options: [
       { label: 'DEVELOPMENT', value: 'dev' },
@@ -9,12 +9,22 @@ module.exports = [
     ]
   },
   {
-    type: 'environments',
-    label: 'Select Environment',
+    type: 'product',
+    label: 'Select Product',
     options: [
-      { label: 'DEVELOPMENT', value: 'dev' },
-      { label: 'QA', value: 'qa' },
-      { label: 'PRODUCTION', value: 'prod' },
+      { label: 'Rescue', value: 'rescue' },
+      { label: 'Rally', value: 'rally' },
+      { label: 'Reward', value: 'reward' },
+    ]
+  },
+  {
+    type: 'adType',
+    label: 'Select Ad Type',
+    options: [
+      { label: 'Video', value: 'video' },
+      { label: 'Vast', value: 'vast' },
+      { label: 'Vizu', value: 'vizu' },
+      { label: 'Static', value: 'static' }
     ]
   }
 ];

@@ -1,7 +1,7 @@
-<div class="col s6">
-  <label>{{label}}</label>
-  <select class="browser-default">
-    <option value="" disabled selected>Environment</option>
+<div class="col s12 m4">
+  <label class="color-white">{{label}}</label>
+  <select data-type="{{type}}" class="dropdown browser-default">
+    <option value="" disabled selected>---</option>
     {{#each options}}
       <option value="{{value}}">{{label}}</option>
     {{/each}}
